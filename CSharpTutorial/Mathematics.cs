@@ -8,9 +8,23 @@ namespace CSharpTutorial
 {
     public class Mathematics
     {
-        public int Addition(int a,int b)
+        private int value1, value2;
+        public Mathematics(int a, int b)
         {
-            return a + b;
+            value1 = a;
+            value2 = b;
+        }
+        public int Addition()
+        {
+            return value1 + value2;
+        }
+        public int Multiplication()
+        {
+            return value1 * value2;
+        }
+        public int Subtraction()
+        {
+            return value1 - value2;
         }
     }
 }
