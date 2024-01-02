@@ -10,10 +10,9 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Mathematics obj = new Mathematics(23,2);
-            Console.WriteLine("The Addition is " + obj.Addition());
-            Console.WriteLine("The Multiplication is " + obj.Multiplication());
-            Console.WriteLine("The Subtraction is " + obj.Subtraction());
+            Department obj = new Department();
+            obj.DepartmentMethod();
+            obj.CollegeMethod();
         }
     }
 }
