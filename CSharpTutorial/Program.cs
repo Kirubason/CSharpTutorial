@@ -10,13 +10,14 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            BankAccount obj = new BankAccount(10000);
-            obj.Deposit = 100;
-            Console.WriteLine("The current account balance after credited 100 is " + obj.Deposit);
+            OverloadingExample obj1 = new OverloadingExample();
+            Console.WriteLine("The Addition is " + obj1.Addition(5,4));
 
-            Console.WriteLine("The total account balance is " + obj.AccountBalance);
-            obj.CloseAccount = 0;
-            Console.WriteLine("The total account balance is " + obj.AccountBalance);
+            OverridingExampleParent obj2 = new OverridingExampleParent();
+            obj2.Job("Doctor");
+
+            OverridingExampleChild obj3 = new OverridingExampleChild();
+            obj3.Job("Studies");
         }
     }
 }
