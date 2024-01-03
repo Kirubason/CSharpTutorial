@@ -10,9 +10,13 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Department obj = new Department();
-            obj.DepartmentMethod();
-            obj.CollegeMethod();
+            BankAccount obj = new BankAccount(10000);
+            //obj.Deposit = 100;
+            //Console.WriteLine("The current account balance after credited 100 is " + obj.Deposit);
+
+            //Console.WriteLine("The total account balance is " + obj.AccountBalance);
+            //obj.CloseAccount = 0;
+            //Console.WriteLine("The total account balance is " + obj.AccountBalance);
         }
     }
 }
