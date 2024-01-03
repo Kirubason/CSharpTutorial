@@ -9,14 +9,14 @@ namespace CSharpTutorial
     public class BankAccount
     {
         #region variables
-        public int Currentbalance;
+        private int Currentbalance;
         #endregion
         #region properties
         public int Deposit
         {
             get
             {
-                return this.Currentbalance;
+                return Currentbalance;
             }
             set
             {
