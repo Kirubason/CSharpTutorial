@@ -12,5 +12,9 @@ namespace CSharpTutorial
         {
             return a + b;
         }
+        public int Addition(int a, int b, int c)
+        {
+            return a + b + c;
+        }
     }
 }
