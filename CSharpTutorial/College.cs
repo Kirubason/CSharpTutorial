@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-    public class College
+    public static class College
     {
         static string collegeName = "Anna University";
         static string DepartmentName = "Mechanical";
@@ -15,9 +15,10 @@ namespace CSharpTutorial
         {
             return collegeName + " and " + DepartmentName + " and " + Year;
         }
-        public College()
+        static College()
         {
             Year++;
         }
     }
+
 }

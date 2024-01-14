@@ -12,10 +12,6 @@ namespace CSharpTutorial
         {
             Console.WriteLine(College.CollegeMethod());
             Console.WriteLine(College.CollegeMethod());
-            College clg1 = new College();
-            Console.WriteLine(College.CollegeMethod());
-            College clg2 = new College();
-            Console.WriteLine(College.CollegeMethod());
         }
     }
 }
