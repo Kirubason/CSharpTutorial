@@ -10,14 +10,12 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            OverloadingExample obj1 = new OverloadingExample();
-            Console.WriteLine("The Addition is " + obj1.Addition(5,4));
-
-            OverridingExampleParent obj2 = new OverridingExampleParent();
-            obj2.Job("Doctor");
-
-            OverridingExampleChild obj3 = new OverridingExampleChild();
-            obj3.Job("Studies");
+            Console.WriteLine(College.CollegeMethod());
+            Console.WriteLine(College.CollegeMethod());
+            College clg1 = new College();
+            Console.WriteLine(College.CollegeMethod());
+            College clg2 = new College();
+            Console.WriteLine(College.CollegeMethod());
         }
     }
 }
