@@ -10,8 +10,12 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(College.CollegeMethod());
-            Console.WriteLine(College.CollegeMethod());
+            ChildRobot Interfaceobj = new ChildRobot();
+            Interfaceobj.Sensor();
+            Interfaceobj.Body();
+            ChildRobotClass AbstractObj = new ChildRobotClass();
+            AbstractObj.Sensor();
+            AbstractObj.Body();
         }
     }
 }
