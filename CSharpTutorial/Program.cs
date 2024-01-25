@@ -10,35 +10,30 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ExceptionMethod());
-        }
-        public static string ExceptionMethod()
-        {
-            int[] ArrInt = new int[3];
             try
             {
-                Console.WriteLine("Please enter the index position");
-                int index = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Please enter the value");
-                int value = Convert.ToInt32(Console.ReadLine());
-
-                ArrInt[index] = value;
-                return "No exception, The value in the index position " + index + " is " + value;
-            }
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine(ex.Message);
-                return "There is an exception while calling the method";
+                ExceptionMethod1();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return "There is an exception while calling the method";
+                Console.WriteLine(ex.StackTrace);
             }
-            finally
+        }
+        public static void ExceptionMethod1()
+        {
+            try
             {
-                Console.WriteLine("Finally method executed");
+                ExceptionMethod2();
             }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        public static void ExceptionMethod2()
+        {
+            Console.WriteLine("Please enter integer value");
+            int value = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
