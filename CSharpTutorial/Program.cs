@@ -10,9 +10,11 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            ReadonlyConstantDemo obj = new ReadonlyConstantDemo("Physics");
-            Console.WriteLine(obj.Subject);
-            Console.WriteLine(ReadonlyConstantDemo.pi);
+            var pi = 3.14f;
+            var Subject = "Maths";
+
+            dynamic Teacher = "Abraham";
+            dynamic IsPresent = false;
         }
         
     }
