@@ -10,30 +10,17 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            try
-            {
-                ExceptionMethod1();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.StackTrace);
-            }
+            RefOutDemo obj = new RefOutDemo();
+            int a = 5;
+            int b = 10;
+            Console.WriteLine("Previous value of a = " + a);
+            Console.WriteLine("Previous value of b = " + b);
+
+            Console.WriteLine(obj.Addition(ref a,out b));
+
+            Console.WriteLine("After value of a = "+ a);
+            Console.WriteLine("After value of b = "+ b);
         }
-        public static void ExceptionMethod1()
-        {
-            try
-            {
-                ExceptionMethod2();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-        public static void ExceptionMethod2()
-        {
-            Console.WriteLine("Please enter integer value");
-            int value = Convert.ToInt32(Console.ReadLine());
-        }
+        
     }
 }
