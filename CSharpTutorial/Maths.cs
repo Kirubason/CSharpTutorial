@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-    class Program
+    public class Maths
     {
-        static void Main(string[] args)
+        public float pi;
+
+        public Maths(float pi)
         {
-            Maths obj = new Maths(3.14f);
+            this.pi = pi;
         }
-        
     }
 }
