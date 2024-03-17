@@ -10,7 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Maths obj = new Maths(3.14f);
+            int carNumber = 15;
+            Console.WriteLine("Car number is " + carNumber.IsEvenOrOdd());
         }
         
     }

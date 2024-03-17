@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-    public class Maths
+    public static class ExtensionMethodClass
     {
-        public float pi;
-
-        public Maths(float pi)
+        public static string IsEvenOrOdd(this int number)
         {
-            this.pi = pi;
+            return number % 2 == 0 ? "Even" : "Odd";
         }
     }
 }
