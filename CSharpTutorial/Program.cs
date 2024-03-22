@@ -10,8 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            int carNumber = 15;
-            Console.WriteLine("Car number is " + carNumber.IsEvenOrOdd());
+            int? carNumber = null;
+            Nullable<int> carNumberNew = null;
         }
         
     }
