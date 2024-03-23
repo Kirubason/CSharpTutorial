@@ -10,8 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            int? carNumber = null;
-            Nullable<int> carNumberNew = null;
+            bool IsEqual = Mathematics.IsEqual("Micah", "Micah");
+            Console.WriteLine(IsEqual == true ? "The given values are equal" : "The given values are not equal");
         }
         
     }
