@@ -10,8 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            bool IsEqual = Mathematics.IsEqual("Micah", "Micah");
-            Console.WriteLine(IsEqual == true ? "The given values are equal" : "The given values are not equal");
+            string[] states = new string[] { "Tamil nadu", "Kerala", "Andhra", "Bihar" };
+            Console.WriteLine(Country.States(states) + "are major states in India");
         }
         
     }
