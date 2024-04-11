@@ -10,8 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            string[] states = new string[] { "Tamil nadu", "Kerala", "Andhra", "Bihar" };
-            Console.WriteLine(Country.States(states) + "are major states in India");
+            string states = Country.States("Tamil nadu","Kerala");
+            Console.WriteLine(states + "are major states in India");
         }
         
     }
