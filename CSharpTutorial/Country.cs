@@ -8,16 +8,19 @@ namespace CSharpTutorial
 {
     public class Country
     {
-        public static string States(params string[] States)
+        //Change this variable access modifier and test
+        public static string CountryName = "India";
+        public void CountryMethod()
         {
-            StringBuilder Totalstate = new StringBuilder();
-            foreach(var state in States)
-            {
-                Totalstate.Append(state);
-                Totalstate.Append(", ");
-            }
-            return Totalstate.ToString();
+            Console.WriteLine("My country is" + CountryName);
         }
-
+    }
+    public class state : Country
+    {
+        public void StateMethod()
+        {
+            Console.WriteLine("My country is" + CountryName);
+        }
     }
 }
+

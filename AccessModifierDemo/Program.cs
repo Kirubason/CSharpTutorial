@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CSharpTutorial;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpTutorial
+namespace AccessModifierDemo
 {
     class Program
     {
@@ -12,6 +13,5 @@ namespace CSharpTutorial
         {
             Console.WriteLine("My country is " + Country.CountryName);
         }
-        
     }
 }
