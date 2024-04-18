@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-    public class Country
+    public partial class Country
     {
-        //Change this variable access modifier and test
         public static string CountryName = "India";
         public void CountryMethod()
         {
             Console.WriteLine("My country is" + CountryName);
         }
     }
-    public class state : Country
+    public partial class Country
     {
-        public void StateMethod()
+        public static string ParentCountryName = "India";
+        public void ParentCountryMethod()
         {
-            Console.WriteLine("My country is" + CountryName);
+            Console.WriteLine("My Parent country is" + ParentCountryName);
         }
     }
+    
 }
 

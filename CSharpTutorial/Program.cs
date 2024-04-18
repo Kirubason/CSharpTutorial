@@ -10,7 +10,9 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("My country is " + Country.CountryName);
+            Country obj = new Country();
+            obj.CountryMethod();
+            obj.ParentCountryMethod();
         }
         
     }
