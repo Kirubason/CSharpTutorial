@@ -14,7 +14,7 @@ namespace CSharpTutorial
             Console.WriteLine("My country is" + CountryName);
         }
     }
-    public partial class Country
+    public sealed partial class Country
     {
         public static string ParentCountryName = "India";
         public void ParentCountryMethod()
@@ -22,6 +22,13 @@ namespace CSharpTutorial
             Console.WriteLine("My Parent country is" + ParentCountryName);
         }
     }
-    
+    public class State : Country
+    {
+        public static string StateName = "Tamilnadu";
+        public void StateMethod()
+        {
+            Console.WriteLine("My State is" + StateName);
+        }
+    }
 }
 
