@@ -10,9 +10,18 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Country obj = new Country();
-            obj.CountryMethod();
-            obj.ParentCountryMethod();
+            foreach (string Country in PrintCountry())
+            {
+                Console.WriteLine(Country);
+            }
+            IEnumerable<string> PrintCountry()
+            {
+                
+                yield return "India";
+                yield return "US";
+                yield return "UK";
+                yield return "Europe";
+            }
         }
         
     }
