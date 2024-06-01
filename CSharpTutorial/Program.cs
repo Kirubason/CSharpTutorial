@@ -10,17 +10,18 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            foreach (string Country in PrintCountry())
+            foreach (string Country in PrintCountry(4))
             {
                 Console.WriteLine(Country);
             }
-            IEnumerable<string> PrintCountry()
+            IEnumerable<string> PrintCountry(int count)
             {
-                
-                yield return "India";
-                yield return "US";
-                yield return "UK";
-                yield return "Europe";
+                List<string> countries = new List<string>() {
+                "India","US","UK","Europe"};
+                for(int i =0;i<count;i++)
+                {
+                    yield return countries[i];
+                }
             }
         }
         
