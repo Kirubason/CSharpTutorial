@@ -10,20 +10,28 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            foreach (string Country in PrintCountry(4))
+            foreach (string Country in PrintCountry('u'))
             {
                 Console.WriteLine(Country);
             }
-            IEnumerable<string> PrintCountry(int count)
-            {
-                List<string> countries = new List<string>() {
+            
+            Console.ReadLine();
+        }
+        static IEnumerable<string> PrintCountry(char chr)
+        {
+            List<string> countries = new List<string>() {
                 "India","US","UK","Europe"};
-                for(int i =0;i<count;i++)
-                {
+            //List<string> countriesWithChar = new List<string>();
+            for (int i = 0; i < countries.Count; i++)
+            {
+                if(countries[i].ToLower().Contains(chr))
+				{
+                    Console.WriteLine(i.ToString());
                     yield return countries[i];
+                    //countriesWithChar.Add(countries[i]);
                 }
             }
+            //return countriesWithChar;
         }
-        
     }
 }
