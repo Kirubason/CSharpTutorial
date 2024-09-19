@@ -10,25 +10,12 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Break Example");
-            for(int i = 0; i <= 5; i++)
-            {
-                if(i==3)
-                {
-                    break;
-                }
-                Console.WriteLine(i);
-            }
+            string CountryName = null;
 
-			Console.WriteLine("Continue Example");
-			for (int i = 0; i <= 5; i++)
-			{
-				if (i == 3)
-				{
-					continue;
-				}
-				Console.WriteLine(i);
-			}
+            string Output = CountryName ?? "India";
+
+            Console.WriteLine("The country name is " + Output);
+
             Console.ReadLine();
 		}
         
