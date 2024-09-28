@@ -11,35 +11,17 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-
-			Console.WriteLine(GetEnumDescription(CollegeRank.AnnaUniversity) + " college councelling code is " + (int)CollegeRank.AnnaUniversity);
-			Console.WriteLine(GetEnumDescription(CollegeRank.GovtClgTvl) + " councelling code is " + (int)CollegeRank.GovtClgTvl);
-
-			Console.ReadLine();
+			int VegetablePrice = 30; 
+			string[] Vegetables = new string[] {"Onion", "Potato"};
+			Fruits FruitObj = new Fruits();
+			char FirstChar = 'a'; 
+			DateTime CurrentDateTime = DateTime.Now;
 		}
 
-		public enum CollegeRank
+		public class Fruits
 		{
-			[Description("Anna University")]
-			AnnaUniversity = 1,
-
-			[Description("Government College of Technology, Coimbatore")]
-			GovtClgCoimbatore = 7177,
-
-			[Description("Government College of Engineering, Tirunelveli")]
-			GovtClgTvl = 9508,
-
-			[Description("Mepco Schlenk Engineering College")]
-			MepcoClg = 9517
+			int FruitPrice = 45;
+			bool IsFruitAvailable = true;
 		}
-
-		public static string GetEnumDescription(Enum value)
-		{
-			var field = value.GetType().GetField(value.ToString());
-			var attribute = (DescriptionAttribute)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
-			return attribute == null ? value.ToString() : attribute.Description;
-		}
-
-
 	}
 }
