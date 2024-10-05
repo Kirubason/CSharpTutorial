@@ -11,17 +11,27 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			int VegetablePrice = 30; 
-			string[] Vegetables = new string[] {"Onion", "Potato"};
-			Fruits FruitObj = new Fruits();
-			char FirstChar = 'a'; 
-			DateTime CurrentDateTime = DateTime.Now;
+			Fruits obj = new Fruits(23, true, new string[] { "Mango", "Orange", "Banana" });
+			Console.WriteLine(obj.FruitPrice);
+			Console.WriteLine(obj.IsFruitAvailable);
+			Console.WriteLine(obj.FruitsList[0]);
 		}
 
-		public class Fruits
+		public struct Fruits
 		{
-			int FruitPrice = 45;
-			bool IsFruitAvailable = true;
+			public int FruitPrice;
+			public bool IsFruitAvailable;
+			public string[] FruitsList
+			{
+				get;set;
+
+			}
+			public Fruits(int FruitPrice, bool IsFruitAvailable, string[] FruitsList)
+			{
+				this.FruitPrice = FruitPrice;
+				this.IsFruitAvailable = IsFruitAvailable;
+				this.FruitsList = FruitsList;
+			}
 		}
 	}
 }
