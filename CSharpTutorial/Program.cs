@@ -11,26 +11,29 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			Fruits obj = new Fruits(23, true, new string[] { "Mango", "Orange", "Banana" });
-			Console.WriteLine(obj.FruitPrice);
-			Console.WriteLine(obj.IsFruitAvailable);
-			Console.WriteLine(obj.FruitsList[0]);
+			Fruits obj = new Fruits(23, true, "Mango");
+			Console.WriteLine(obj.FruitName + " is " + (obj.IsFruitAvailable ? "Availeble" : "Not Available") + " and Its price is " +obj.FruitPrice);
+			obj.SellFruit();
 		}
 
 		public struct Fruits
 		{
 			public int FruitPrice;
 			public bool IsFruitAvailable;
-			public string[] FruitsList
+			public string FruitName
 			{
 				get;set;
 
 			}
-			public Fruits(int FruitPrice, bool IsFruitAvailable, string[] FruitsList)
+			public Fruits(int FruitPrice, bool IsFruitAvailable, string FruitName)
 			{
 				this.FruitPrice = FruitPrice;
 				this.IsFruitAvailable = IsFruitAvailable;
-				this.FruitsList = FruitsList;
+				this.FruitName = FruitName;
+			}
+			public void SellFruit()
+			{
+				Console.WriteLine("Fruit is sold");
 			}
 		}
 	}
