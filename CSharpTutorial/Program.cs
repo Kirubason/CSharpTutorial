@@ -11,30 +11,32 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			Fruits obj = new Fruits(23, true, "Mango");
-			Console.WriteLine(obj.FruitName + " is " + (obj.IsFruitAvailable ? "Availeble" : "Not Available") + " and Its price is " +obj.FruitPrice);
-			obj.SellFruit();
+			TaminNadu taminNadu = new TaminNadu();
 		}
+	}
 
-		public struct Fruits
+	public class India
+	{
+		public int medicalColleges = 706;
+        public India()
+        {
+            Console.WriteLine("This is parameterless constructor in India");
+		}
+        public India(bool value)
+        {
+			Console.WriteLine("This is parameter constructor in India");
+		}
+    }
+
+	public class TaminNadu : India
+	{
+		public int medicalColleges = 74;
+
+		public TaminNadu() : base(true)
 		{
-			public int FruitPrice;
-			public bool IsFruitAvailable;
-			public string FruitName
-			{
-				get;set;
-
-			}
-			public Fruits(int FruitPrice, bool IsFruitAvailable, string FruitName)
-			{
-				this.FruitPrice = FruitPrice;
-				this.IsFruitAvailable = IsFruitAvailable;
-				this.FruitName = FruitName;
-			}
-			public void SellFruit()
-			{
-				Console.WriteLine("Fruit is sold");
-			}
+			Console.WriteLine("Total medical colleges in India: " + base.medicalColleges);
+			Console.WriteLine("Total medical colleges in Tamilnadu:" + this.medicalColleges);
 		}
+
 	}
 }
