@@ -11,32 +11,21 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			TaminNadu taminNadu = new TaminNadu();
-		}
-	}
+			object name = "Micah Tech";
+			if(name is string)
+			{
+				Console.WriteLine("Yes, Name is string data type");
+				string strName = name as string;
+				Console.WriteLine(strName);
+			}
+			else
+			{
+				Console.WriteLine("No, Name is not string data type");
+				string strName = name as string;
+				Console.WriteLine(strName);
+			}
 
-	public class India
-	{
-		public int medicalColleges = 706;
-        public India()
-        {
-            Console.WriteLine("This is parameterless constructor in India");
+			Console.ReadLine();
 		}
-        public India(bool value)
-        {
-			Console.WriteLine("This is parameter constructor in India");
-		}
-    }
-
-	public class TaminNadu : India
-	{
-		public int medicalColleges = 74;
-
-		public TaminNadu() : base(true)
-		{
-			Console.WriteLine("Total medical colleges in India: " + base.medicalColleges);
-			Console.WriteLine("Total medical colleges in Tamilnadu:" + this.medicalColleges);
-		}
-
 	}
 }
