@@ -11,21 +11,20 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			object name = "Micah Tech";
-			if(name is string)
-			{
-				Console.WriteLine("Yes, Name is string data type");
-				string strName = name as string;
-				Console.WriteLine(strName);
-			}
-			else
-			{
-				Console.WriteLine("No, Name is not string data type");
-				string strName = name as string;
-				Console.WriteLine(strName);
-			}
+            string sentence1 = "My ";
+            sentence1 += "name ";
+            sentence1 += "is ";
+            sentence1 += "Micah Tech";
 
-			Console.ReadLine();
-		}
+            Console.WriteLine(sentence1);
+
+            StringBuilder sentence2 = new StringBuilder();
+            sentence2.Append("My ");
+            sentence2.Append("name ");
+            sentence2.Append("is ");
+            sentence2.Append("Micah Tech");
+            Console.WriteLine(sentence2);
+
+        }
 	}
 }
