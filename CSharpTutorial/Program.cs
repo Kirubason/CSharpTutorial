@@ -11,14 +11,14 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-			Console.WriteLine("The maximum GC generation is " + GC.MaxGeneration);
+			using (FileHandler FileHandlerobj = new FileHandler("C:\\Users\\Kirub\\Desktop\\example.txt"))
+			{
+				FileHandlerobj.WriteToFile("Hello, World!");
+			} // Dispose is called automatically at the end of the using block
 
-			Program obj = new Program();
-			Console.WriteLine("The generation of obj is " + GC.GetGeneration(obj));
-			Console.WriteLine("The total allocated memory before GC run is " + GC.GetTotalMemory(false));
-
+			FileHandler FileHandlerobj2 = new FileHandler("C:\\Users\\Kirub\\Desktop\\example.txt");
 			GC.Collect(0);
-			Console.WriteLine("The total allocated memory after GC run is " + GC.GetTotalMemory(false));
 		}
+
 	}
 }
