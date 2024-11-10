@@ -19,7 +19,9 @@ namespace CSharpTutorial
 			unmanagedResource = Marshal.AllocHGlobal(100);
 		}
 		public void WriteToFile(string content) 
-		{ 
+		{
+			if (managedFileStream == null)
+				throw new ObjectDisposedException("FileHandler");
 			byte[] info = new UTF8Encoding(true).GetBytes(content);
 			managedFileStream.Write(info, 0, info.Length); 
 		}
