@@ -12,29 +12,11 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            GenericCollectionDemo genericCollectionDemo = new GenericCollectionDemo();
-            NonGenericCollectionDemo nonGenericCollectionDemo = new NonGenericCollectionDemo();
+            double pi = 3.14;
+            object mathPi = pi; // Boxing
 
-            genericCollectionDemo.ExampleList();
-            nonGenericCollectionDemo.ExampleArrayList();
-            Console.WriteLine("--------------------------");
-
-
-			genericCollectionDemo.ExampleDictionary();
-            nonGenericCollectionDemo.ExampleHashtable();
-			Console.WriteLine("--------------------------");
-
-			genericCollectionDemo.ExampleSortedList();
-            nonGenericCollectionDemo.ExampleSortedList();
-			Console.WriteLine("--------------------------");
-
-			genericCollectionDemo.ExampleStack();
-            nonGenericCollectionDemo.ExampleStack();
-			Console.WriteLine("--------------------------");
-
-			genericCollectionDemo.ExampleQueue();
-			nonGenericCollectionDemo.ExampleQueue();
-			Console.WriteLine("--------------------------");
+            object value = 100;
+            int intValue = (int)value; // Unboxing
 		}
 
 	}
