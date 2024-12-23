@@ -12,13 +12,29 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            string[] months = new string[2];
-			months[0] = "January";
-			months[1] = "February";
-			for (int i = 0; i < months.Length; i++)
-            {
-                Console.WriteLine(months[i]);
-            }
+            GenericCollectionDemo genericCollectionDemo = new GenericCollectionDemo();
+            NonGenericCollectionDemo nonGenericCollectionDemo = new NonGenericCollectionDemo();
+
+            genericCollectionDemo.ExampleList();
+            nonGenericCollectionDemo.ExampleArrayList();
+            Console.WriteLine("--------------------------");
+
+
+			genericCollectionDemo.ExampleDictionary();
+            nonGenericCollectionDemo.ExampleHashtable();
+			Console.WriteLine("--------------------------");
+
+			genericCollectionDemo.ExampleSortedList();
+            nonGenericCollectionDemo.ExampleSortedList();
+			Console.WriteLine("--------------------------");
+
+			genericCollectionDemo.ExampleStack();
+            nonGenericCollectionDemo.ExampleStack();
+			Console.WriteLine("--------------------------");
+
+			genericCollectionDemo.ExampleQueue();
+			nonGenericCollectionDemo.ExampleQueue();
+			Console.WriteLine("--------------------------");
 		}
 
 	}
