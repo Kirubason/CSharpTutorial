@@ -8,15 +8,19 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-    class Program
+	class Program
     {
         static void Main(string[] args)
         {
-            double pi = 3.14;
-            object mathPi = pi; // Boxing
 
-            object value = 100;
-            int intValue = (int)value; // Unboxing
+			Calculator obj = new Calculator();
+			Calculate calculate = new Calculate(obj.Divide); // Single cast delegate
+			calculate += obj.Multiply;
+			calculate += obj.Subtract; // Multi cast delegate
+			calculate += delegate(int x, int y) {
+				Console.WriteLine("The addition of two value is {0}", +(x + y));
+			}; // Anonymous delegate
+			calculate(40, 5);
 		}
 
 	}
