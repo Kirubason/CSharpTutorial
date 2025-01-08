@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpTutorial
 {
-	public delegate void VotingCountChangedHandler(object sender, VotingCountChangedEventArgs e);
+	public delegate void VotingCountChangedHandler(object sender, string Thoguthi, int newVotingCount);
 	public class Election
 	{
 
@@ -28,13 +28,13 @@ namespace CSharpTutorial
 				if (VotingCount != value)
 				{
 					votingCount = value;
-					OnVotingCountChanged(new VotingCountChangedEventArgs(Thoguthi, value));
+					OnVotingCountChanged(Thoguthi, value);
 				}
 			}
 		}
-		protected virtual void OnVotingCountChanged(VotingCountChangedEventArgs e)
+		protected virtual void OnVotingCountChanged(string Thoguthi,int newVotingCount)
 		{
-			VotingCountChanged?.Invoke(this, e);
+			VotingCountChanged?.Invoke(this, Thoguthi, newVotingCount);
 		}
 	}
 }

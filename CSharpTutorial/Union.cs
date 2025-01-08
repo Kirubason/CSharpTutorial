@@ -8,9 +8,9 @@ namespace CSharpTutorial
 {
 	public class Union
 	{
-		public static void UpdateToUnionOffice(object sender, VotingCountChangedEventArgs e)
+		public static void UpdateToUnionOffice(object sender, string Thoguthi, int newVotingCount)
 		{
-			Console.WriteLine($"The voting count of {e.Thoguthi} changed to {e.NewVotingCount} and updated in Union office");
+			Console.WriteLine($"The voting count of {Thoguthi} changed to {newVotingCount} and updated in Union office");
 		}
 	}
 }
