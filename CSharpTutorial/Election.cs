@@ -9,8 +9,8 @@ namespace CSharpTutorial
 	public delegate void VotingCountChangedHandler(object sender, VotingCountChangedEventArgs e);
 	public class Election
 	{
-		public event VotingCountChangedHandler VotingCountChanged;
 
+		public event VotingCountChangedHandler VotingCountChanged;
 		private int votingCount;
 		public string Thoguthi { get; }
 
@@ -32,7 +32,6 @@ namespace CSharpTutorial
 				}
 			}
 		}
-
 		protected virtual void OnVotingCountChanged(VotingCountChangedEventArgs e)
 		{
 			VotingCountChanged?.Invoke(this, e);

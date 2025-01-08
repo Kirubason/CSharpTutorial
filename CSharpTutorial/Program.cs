@@ -15,9 +15,9 @@ namespace CSharpTutorial
 
 			Election election = new Election("Tirunelveli", 0);
 
-			election.VotingCountChanged += UpdateToDistrictOffice;
-			election.VotingCountChanged += UpdateToStateOffice;
-			election.VotingCountChanged += UpdateToUnionOffice;
+			election.VotingCountChanged += District.UpdateToDistrictOffice;
+			election.VotingCountChanged += State.UpdateToStateOffice;
+			election.VotingCountChanged += Union.UpdateToUnionOffice;
 
 			election.VotingCount = 1121;
 			Console.WriteLine();
@@ -28,20 +28,6 @@ namespace CSharpTutorial
 			election.VotingCount = 8150;
 			Console.WriteLine();
 		}
-
-		private static void UpdateToDistrictOffice(object sender, VotingCountChangedEventArgs e)
-		{
-			Console.WriteLine($"The voting count of {e.Thoguthi} changed to {e.NewVotingCount} and updated in District office");
-		}
-
-		private static void UpdateToStateOffice(object sender, VotingCountChangedEventArgs e)
-		{
-			Console.WriteLine($"The voting count of {e.Thoguthi} changed to {e.NewVotingCount} and updated in State office");
-		}
-
-		private static void UpdateToUnionOffice(object sender, VotingCountChangedEventArgs e)
-		{
-			Console.WriteLine($"The voting count of {e.Thoguthi} changed to {e.NewVotingCount} and updated in Union office");
-		}
+		
 	}
 }
