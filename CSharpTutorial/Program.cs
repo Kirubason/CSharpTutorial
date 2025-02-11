@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -11,46 +12,40 @@ namespace CSharpTutorial
 {
 	class Program
 	{
-		static void Main(string[] args)
+		public static async Task Main(string[] args)
 		{
+			Stopwatch sw = new Stopwatch();
+			sw.Start();
+
 			Console.WriteLine("Main method execution is started");
-
-			// Normal Flow
-			Method1();
-			Method1WithResult();
-
-			//Thread
-			Thread thread1 = new Thread(Method1);
-			thread1.Start();
-
-			//Task
-			Task<int> task1 = Task.Run(Method1WithResult);
-			int result = task1.Result;
-			Console.WriteLine($"Task result: {result}");
-
+			Task washingTask = WashingClothes();
+			Task cleaningTask = CleaningHouse();
+			Task cookingTask = CookingFood();
+			await Task.WhenAll(washingTask, cleaningTask, cookingTask);
 			Console.WriteLine("Main method execution is completed");
+
+			sw.Stop();
+			Console.WriteLine("Elapsed time " + sw.Elapsed);
 			Console.ReadLine();
 		}
 
-		static void Method1()
+		public static async Task WashingClothes()
 		{
-			for (int i = 1; i < 5; i++)
-			{
-				Console.WriteLine($"Thread Method1 execution: {i}");
-				Thread.Sleep(1000); // Simulate work with 1-second delay
-			}
+			Console.WriteLine("The washing clothes is started");
+			await Task.Delay(3000);
+			Console.WriteLine("The washing clothes is Completed");
 		}
-		static int Method1WithResult()
+		public static async Task CleaningHouse()
 		{
-			int sum = 0;
-			for (int i = 1; i < 5; i++)
-			{
-				Console.WriteLine($"Task MethodWithResult execution: {i}");
-				sum += i;
-				Thread.Sleep(1000); // Simulate work with 1-second delay
-			}
-			return sum;
-
+			Console.WriteLine("The cleaning house is started");
+			await Task.Delay(2000);
+			Console.WriteLine("The cleaning house is Completed");
+		}
+		public static async Task CookingFood()
+		{
+			Console.WriteLine("The cooking food is started");
+			await Task.Delay(5000);
+			Console.WriteLine("The cooking food is Completed");
 		}
 	}
 }
